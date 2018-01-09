@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B8DEF80-8CE8-4AC9-A96C-CED7D8F080AC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>QScript</RootNamespace>
+    <AssemblyName>QScript</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\Editor.cs" />
+    <Compile Include="Engine\VM.cs" />
+    <Compile Include="Help\Executer.cs" />
+    <Compile Include="Help\KeyValue.cs" />
+    <Compile Include="Help\List.cs" />
+    <Compile Include="Help\Operation.cs" />
+    <Compile Include="Help\Stack.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Script\BasicConst.cs" />
+    <Compile Include="Script\BasicObject.cs" />
+    <Compile Include="Script\Bloc.cs" />
+    <Compile Include="Script\Bool.cs" />
+    <Compile Include="Script\Break.cs" />
+    <Compile Include="Script\ByRef.cs" />
+    <Compile Include="Script\Call.cs" />
+    <Compile Include="Script\Class.cs" />
+    <Compile Include="Script\Continue.cs" />
+    <Compile Include="Script\Currency.cs" />
+    <Compile Include="Script\Date.cs" />
+    <Compile Include="Script\Do.cs" />
+    <Compile Include="Script\Dot.cs" />
+    <Compile Include="Script\Error.cs" />
+    <Compile Include="Script\Exception.cs" />
+    <Compile Include="Script\Execute.cs" />
+    <Compile Include="Script\Expression.cs" />
+    <Compile Include="Script\Field.cs" />
+    <Compile Include="Script\FieldPath.cs" />
+    <Compile Include="Script\For.cs" />
+    <Compile Include="Script\Function.cs" />
+    <Compile Include="Script\get.cs" />
+    <Compile Include="Script\If.cs" />
+    <Compile Include="Script\Import.cs" />
+    <Compile Include="Script\Int.cs" />
+    <Compile Include="Script\Long.cs" />
+    <Compile Include="Script\MethodPath.cs" />
+    <Compile Include="Script\New.cs" />
+    <Compile Include="Script\Object.cs" />
+    <Compile Include="Script\Parent.cs" />
+    <Compile Include="Script\Real.cs" />
+    <Compile Include="Script\RefExpression.cs" />
+    <Compile Include="Script\Return.cs" />
+    <Compile Include="Script\Scop.cs" />
+    <Compile Include="Script\set.cs" />
+    <Compile Include="Script\Text.cs" />
+    <Compile Include="Script\Throw.cs" />
+    <Compile Include="Script\Try.cs" />
+    <Compile Include="Script\Void.cs" />
+    <Compile Include="Script\While.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
